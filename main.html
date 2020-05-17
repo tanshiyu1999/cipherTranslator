@@ -1,4 +1,10 @@
 <!doctype html>
+<style media="screen">
+  body, html {
+    height: 100%;
+  }
+</style>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,51 +18,27 @@
   </head>
 
 
-  <body>
+  <body class="container-fluid">
     <h1 class="text-center">The encryption machine</h1>
-
-    <div class="row fill p-5 bg-light">
-      <div class="col-5 bg-info text-center">
-        <form class="m-3" action="input" method="post">
-          <label for="entry" class="bold">Input your stuff!</label>
-          <textarea class="form-control" rows="6" id="entry" type="text" name="encryption"  placeholder="Stuff"></textarea>
-        </form>
+    <div class="d-flex flex-column h-100 justify-content-center">
+      <div class="row p-5 bg-light">
+          <div class="col-5 bg-info text-center">
+            <form class="m-3" action="input" method="post">
+              <label for="entry" class="bold">Input your stuff!</label>
+              <textarea class="form-control" rows="6" id="entry" type="text" name="encryption"  placeholder="Type your words"></textarea>
+            </form>
+          </div>
+          <div class="col-2 bg-success align-self-center">
+            <button id="convert-button" class="btn btn-default btn-block" type="button" name="convert">Convert</button>
+          </div>
+          <div class="col-5 text-center bg-warning">
+            <form class="m-3" action="input" method="post">
+              <label for="output" class="bold">Your encrypted message</label>
+              <textarea class="form-control" rows="6" id="output" type="text" name="encryption"  placeholder="It will output the encryption"></textarea>
+            </form>
+          </div>
       </div>
-      <div class="col-2 bg-success align-self-center">
-        <button id="convert-button" class="btn btn-default btn-block" type="button" name="convert">Convert</button>
-      </div>
-      <div class="col-5 text-center bg-warning">
-        <form class="m-3" action="input" method="post">
-          <label for="output" class="bold">Your encrypted message</label>
-          <textarea class="form-control" rows="6" id="output" type="text" name="encryption"  placeholder=""></textarea>
-        </form>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
