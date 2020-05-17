@@ -7,21 +7,34 @@ convert_button.addEventListener("click", readText);
 
 function readText() {
   let encryptionType = document.getElementById("type-of-decryption").value;
-  switch (encryptionType) {
-    case "ROT13":
-      caesar();
-      break;
-    case "NATO":
-      nato();
-      break;
-    case "BASE64":
-      base64();
-      break;
+  if(document.getElementById("encode").checked) {
+    switch (encryptionType) {
+      case "ROT13":
+        caesarEncode();
+        break;
+      case "NATO":
+        natoEncode();
+        break;
+      case "BASE64":
+        base64Encode();
+        break;
+    }
   }
+  if(document.getElementById("decode").checked) {
+    switch(encryptionType) {
+      case "ROT13":
+        caesarEncode();
+        break;
+      case "BASE64":
+        base64Decode();
+        break;
+    }
+  }
+
 }
 
 // ROT13 ENCODER
-function caesar() {
+function caesarEncode() {
   const input = document.getElementById("entry").value;
   const inputArr = input.split('');
   const outputArr = [];
@@ -41,7 +54,7 @@ function caesar() {
 }
 
 // NATO ENCODER
-function nato() {
+function natoEncode() {
   const input = document.getElementById("entry").value;
   const upperCaseInput = input.toUpperCase();
   const natoLetters = {
@@ -69,8 +82,15 @@ function nato() {
 }
 
 //BASE64 ENCODER
-function base64() {
+function base64Encode() {
   const input = document.getElementById("entry").value;
   const output = window.btoa(input);
+  return document.getElementById("output").value = output;
+}
+
+//BASE64 DECODER
+function base64Decode() {
+  const input = document.getElementById("entry").value;
+  const output = window.atob(input);
   return document.getElementById("output").value = output;
 }
