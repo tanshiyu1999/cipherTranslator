@@ -54,7 +54,9 @@ function nato() {
   for (let i = 0; i < inputArr.length; i++) {
     if (natoKeys.includes(inputArr[i])) {
       outputArr.push(natoLetters[inputArr[i]]);
-      outputArr.push(' ')
+      outputArr.push(' ');
+    } else if (inputArr[i] === " ") {
+      outputArr.push('. ');
     } else {
       outputArr.push(inputArr[i])
     }
