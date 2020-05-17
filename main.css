@@ -8,3 +8,7 @@ body, html {
   font-family: Balsamiq Sans, sans-serif;
   font-weight: bold;
 }
+
+.my-color {
+  background-color: #ADD8E6;
+}
