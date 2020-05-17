@@ -7,14 +7,30 @@ convert_button.addEventListener("click", readText);
 
 function readText() {
   let encryptionType = document.getElementById("type-of-decryption").value;
-  switch (encryptionType) {
-    case "ROT13":
-      caesar();
-      break;
-    case "NATO":
-      nato();
-      break;
+  if(document.getElementById("encode").checked) {
+    switch (encryptionType) {
+      case "ROT13":
+        caesarEncode();
+        break;
+      case "NATO":
+        natoEncode();
+        break;
+      case "BASE64":
+        base64Encode();
+        break;
+    }
   }
+  if(document.getElementById("decode").checked) {
+    switch(encryptionType) {
+      case "ROT13":
+        caesarEncode();
+        break;
+      case "BASE64":
+        base64Decode();
+        break;
+    }
+  }
+
 }
 
 // ROT13 CONVERSION
