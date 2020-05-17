@@ -17,7 +17,7 @@ function readText() {
   }
 }
 
-// ROT13 CONVERSION
+// ROT13 ENCODER
 function caesar() {
   const input = document.getElementById("entry").value;
   const inputArr = input.split('');
@@ -37,7 +37,7 @@ function caesar() {
   return document.getElementById("output").value = output;
 }
 
-// NATO ALPHABETS
+// NATO ENCODER
 function nato() {
   const input = document.getElementById("entry").value;
   const upperCaseInput = input.toUpperCase();
@@ -64,3 +64,12 @@ function nato() {
   var output = outputArr.join('');
   return document.getElementById("output").value = output;
 }
+
+//BASE64 ENCODER
+function base64() {
+  console.log("hi")
+}
+
+
+
+base64();
