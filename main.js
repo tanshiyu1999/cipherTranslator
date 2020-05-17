@@ -33,8 +33,8 @@ function readText() {
 
 }
 
-// ROT13 CONVERSION
-function caesar() {
+// ROT13 ENCODER
+function caesarEncode() {
   const input = document.getElementById("entry").value;
   const inputArr = input.split('');
   const outputArr = [];
@@ -53,8 +53,8 @@ function caesar() {
   return document.getElementById("output").value = output;
 }
 
-// NATO ALPHABETS
-function nato() {
+// NATO ENCODER
+function natoEncode() {
   const input = document.getElementById("entry").value;
   const upperCaseInput = input.toUpperCase();
   const natoLetters = {
@@ -78,5 +78,19 @@ function nato() {
     }
   }
   var output = outputArr.join('');
+  return document.getElementById("output").value = output;
+}
+
+//BASE64 ENCODER
+function base64Encode() {
+  const input = document.getElementById("entry").value;
+  const output = window.btoa(input);
+  return document.getElementById("output").value = output;
+}
+
+//BASE64 DECODER
+function base64Decode() {
+  const input = document.getElementById("entry").value;
+  const output = window.atob(input);
   return document.getElementById("output").value = output;
 }
