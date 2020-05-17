@@ -26,7 +26,16 @@
           <select class="form-control" id="type-of-decryption">
             <option value="NATO">NATO</option>
             <option value="ROT13">ROT13</option>
+            <option value="BASE64">BASE64</option>
           </select>
+          <div class="d-flex flex-column p-4">
+            <td>
+              <label class="my-font inline" for="encode"><input class="form-check-input" type="radio" name="encoder-decoder" id="encode" value="encode" checked>Encode</label>
+            </td>
+            <td>
+              <label class="my-font inline" for="decode"><input class="form-check-input" type="radio" name="encoder-decoder" id="decode" value="decode">Decode</label>
+            </td>
+          </div>
         </div>
       </div>
       <div class="col-4">
