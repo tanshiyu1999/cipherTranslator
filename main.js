@@ -14,6 +14,9 @@ function readText() {
     case "NATO":
       nato();
       break;
+    case "BASE64":
+      base64();
+      break;
   }
 }
 
@@ -67,9 +70,7 @@ function nato() {
 
 //BASE64 ENCODER
 function base64() {
-  console.log("hi")
+  const input = document.getElementById("entry").value;
+  const output = window.btoa(input);
+  return document.getElementById("output").value = output;
 }
-
-
-
-base64();
